@@ -1,3 +1,6 @@
+
+[![Build Status](https://travis-ci.org/bernet-tbz/simple-java-maven-app.svg?branch=master)](https://travis-ci.org/bernet-tbz/simple-java-maven-app)
+
 # simple-java-maven-app
 
 This repository is for the [Using Jenkins to build a Java/Maven project]( https://jenkins.io/doc/tutorials/using-jenkins-to-build-a-java-maven-project/)

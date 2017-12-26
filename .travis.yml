@@ -1,5 +1,5 @@
 language: java
- script:
+script:
  - mvn clean package
  - mvn checkstyle::checkstyle
  - # Checkstyle Outputs

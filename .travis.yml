@@ -3,4 +3,4 @@ script:
  - mvn clean package
  - mvn checkstyle::checkstyle
  - # Checkstyle Outputs
- - cat target/checkstyle-result.xml
+ - cat $CHECKSTYLE

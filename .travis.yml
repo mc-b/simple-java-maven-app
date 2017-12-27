@@ -2,5 +2,12 @@ language: java
 script:
  - mvn clean package
  - mvn checkstyle::checkstyle
- - # Checkstyle Outputs
  - cat $CHECKSTYLE
+deploy:
+  provider: releases
+  api_key:
+    secure: 3jaTzXEAdjf7qnBIZdxZoDHJFltFf7PAm2Mx1Fdg3oDGRjJgOhItrgSkMvg3oBAB6NSQBR+Wdnht1ROfBNLI1NxpuglmZIkXH93gZWbiP8PzZSeYw56hq6Nom//u+0vaVpmpYgTpSqP7X5Iv0HgWjCRK3J5IzZWzUzCZf7L93wpoNYjxsimgHpe86DAa5HkMQhMo8jfTy4K2e9RqR0Tha7pVHbtScPTNOYk3IE2myQnb8bv+ouipWbHJcBvO47dkrVb805/nhv9vzf006gZLwreVRrgqaLylpkPVWvDNMJI3Lvg8EgP0UQp0vu+rOIBizLcz1115OiidpCKxCL92FP19tbMj9JpeA18stHNNYpP6m+abL2yqZsSEc5Gj7IvFbviFcEYin3BaaiYXTg4XwW4sfPbfWRVRRHeu9lU7XpDau14sLcQf5D2VHpqlqAMg4p50eRLB3Yx1vjArO+ehNUGNpG2slai7hh2zdxQJN3Kz6SU3OYkmQ0gT0Yt7PzZ5B02wb6SRYAy70hcRsjN7bwjqJHB9NGFnMjWbzSipVfWV5+IXHDteCZm2LTHgoTCTG9/o6OFA81utNIvk1ig/GE8+0iaQQ/8ICPKIL/QSKNRph2GiNt1berPP99kA1g2IwTuRKmHfMZ894mBv4OMCgfZy4i4arZPaQ+9V7n/D0mg=
+  file: target/my-app-1.0-SNAPSHOT.jar
+  on:
+    repo: bernet-tbz/simple-java-maven-app
+    tags: true

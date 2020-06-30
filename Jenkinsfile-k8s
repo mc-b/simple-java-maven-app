@@ -4,6 +4,7 @@ podTemplate(containers: [
 
     node(POD_LABEL) {
         stage('simple-java-maven-app') {
+         git url: 'https://github.com/mc-b/simple-java-maven-app'
             container('maven') {
                 stage('Build') {
                     sh 'mvn -B -DskipTests clean package'

@@ -3,11 +3,14 @@ podTemplate(containers: [
   ]) {
 
     node(POD_LABEL) {
-        stage('Build') {
+        stage('simple-java-maven-app') {
             container('maven') {
-                stage('Build a Maven project') {
+                stage('Build') {
                     sh 'mvn -B -DskipTests clean package'
                 }
+                stage('Test') {
+                    sh 'mvn test'
+                }                
             }
         }
      }
